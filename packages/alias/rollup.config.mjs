@@ -1,6 +1,7 @@
 import typescript from '@rollup/plugin-typescript';
+import { readFileSync } from 'fs';
 
-import pkg from './package.json';
+const pkg = JSON.parse(readFileSync(new URL('./package.json', import.meta.url), 'utf8'));
 
 export default {
   input: 'src/index.ts',
@@ -9,5 +10,6 @@ export default {
     { file: pkg.main, format: 'cjs', exports: 'auto' },
     { file: pkg.module, format: 'es' }
   ],
-  plugins: [typescript({ sourceMap: false })]
+  plugins: [typescript({ sourceMap: false })],
+  strictDeprecations: true
 };
