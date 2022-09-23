@@ -85,19 +85,25 @@ importers:
 
   packages/auto-install:
     specifiers:
-      '@rollup/plugin-node-resolve': ^8.4.0
-      '@rollup/plugin-typescript': ^5.0.2
-      del: ^5.1.0
+      '@rollup/plugin-node-resolve': ^14.1.0
+      '@rollup/plugin-typescript': ^8.5.0
+      del: 6.1.1
       node-noop: ^1.0.0
-      rollup: ^2.67.3
+      rollup: ^3.0.0-7
       typescript: ^4.1.2
     devDependencies:
-      '@rollup/plugin-node-resolve': 8.4.0_rollup@2.67.3
-      '@rollup/plugin-typescript': 5.0.2_2dbihhqkf5a4hxzstxnoyhj6ca
-      del: 5.1.0
+      '@rollup/plugin-node-resolve': 14.1.0_rollup@3.0.0-7
+      '@rollup/plugin-typescript': 8.5.0_g65ijfblt3broj4674gaqnruzq
+      del: 6.1.1
       node-noop: 1.0.0
-      rollup: 2.67.3
+      rollup: 3.0.0-7
       typescript: 4.1.2
+
+  packages/auto-install/test/fixtures/pnpm-bare:
+    specifiers:
+      node-noop: ^1.0.0
+    dependencies:
+      node-noop: 1.0.0
 
   packages/babel:
     specifiers:
@@ -2228,6 +2234,21 @@ packages:
       rollup: 2.68.0
     dev: true
 
+  /@rollup/plugin-node-resolve/14.1.0_rollup@3.0.0-7:
+    resolution: {integrity: sha512-5G2niJroNCz/1zqwXtk0t9+twOSDlG00k1Wfd7bkbbXmwg8H8dvgHdIWAun53Ps/rckfvOC7scDBjuGFg5OaWw==}
+    engines: {node: '>= 10.0.0'}
+    peerDependencies:
+      rollup: ^2.78.0
+    dependencies:
+      '@rollup/pluginutils': 3.1.0_rollup@3.0.0-7
+      '@types/resolve': 1.17.1
+      deepmerge: 4.2.2
+      is-builtin-module: 3.1.0
+      is-module: 1.0.0
+      resolve: 1.20.0
+      rollup: 3.0.0-7
+    dev: true
+
   /@rollup/plugin-node-resolve/8.4.0_rollup@2.67.3:
     resolution: {integrity: sha512-LFqKdRLn0ShtQyf6SBYO69bGE1upV6wUhBX0vFOUnLAyzx5cwp8svA0eHUnu8+YU57XOkrMtfG63QOpQx25pHQ==}
     engines: {node: '>= 8.0.0'}
@@ -2315,6 +2336,23 @@ packages:
       typescript: 4.1.2
     dev: true
 
+  /@rollup/plugin-typescript/8.5.0_g65ijfblt3broj4674gaqnruzq:
+    resolution: {integrity: sha512-wMv1/scv0m/rXx21wD2IsBbJFba8wGF3ErJIr6IKRfRj49S85Lszbxb4DCo8iILpluTjk2GAAu9CoZt4G3ppgQ==}
+    engines: {node: '>=8.0.0'}
+    peerDependencies:
+      rollup: ^2.14.0
+      tslib: '*'
+      typescript: '>=3.7.0'
+    peerDependenciesMeta:
+      tslib:
+        optional: true
+    dependencies:
+      '@rollup/pluginutils': 3.1.0_rollup@3.0.0-7
+      resolve: 1.20.0
+      rollup: 3.0.0-7
+      typescript: 4.1.2
+    dev: true
+
   /@rollup/plugin-virtual/2.1.0_rollup@2.67.3:
     resolution: {integrity: sha512-CPPAtlKT53HFqC8jFHb/V5WErpU8Hrq2TyCR0A7kPQMlF2wNUf0o1xuAc+Qxj8NCZM0Z3Yvl+FbUXfJjVWqDwA==}
     engines: {node: '>=8.0.0'}
@@ -2356,6 +2394,18 @@ packages:
       estree-walker: 1.0.1
       picomatch: 2.2.2
       rollup: 2.78.1
+
+  /@rollup/pluginutils/3.1.0_rollup@3.0.0-7:
+    resolution: {integrity: sha512-GksZ6pr6TpIjHm8h9lSQ8pi8BE9VeubNT0OMJ3B5uZJ8pz73NPiqOtCog/x2/QzM1ENChPKxMDhiQuRHsqc+lg==}
+    engines: {node: '>= 8.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0
+    dependencies:
+      '@types/estree': 0.0.39
+      estree-walker: 1.0.1
+      picomatch: 2.2.2
+      rollup: 3.0.0-7
+    dev: true
 
   /@rollup/pluginutils/4.2.1:
     resolution: {integrity: sha512-iKnFXr7NkdZAIHiIWE+BX5ULi/ucVFYWD6TbAV+rZctiRTY2PL6tsIKhoIOaoskiWAkgu+VsbXgUVDNLHf+InQ==}
@@ -3088,7 +3138,7 @@ packages:
       convert-source-map: 1.7.0
       currently-unhandled: 0.4.1
       debug: 4.3.1
-      del: 6.0.0
+      del: 6.1.1
       emittery: 0.8.1
       equal-length: 1.0.1
       figures: 3.2.0
@@ -3624,7 +3674,7 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       dot-prop: 5.3.0
-      graceful-fs: 4.2.4
+      graceful-fs: 4.2.6
       make-dir: 3.1.0
       unique-string: 2.0.0
       write-file-atomic: 3.0.3
@@ -4064,7 +4114,7 @@ packages:
     engines: {node: '>=12.20'}
     hasBin: true
     dependencies:
-      del: 6.0.0
+      del: 6.1.1
       meow: 10.0.1
     dev: true
 
@@ -4082,12 +4132,12 @@ packages:
       slash: 3.0.0
     dev: true
 
-  /del/6.0.0:
-    resolution: {integrity: sha512-1shh9DQ23L16oXSZKB2JxpL7iMy2E0S9d517ptA1P8iw0alkPtQcrKH7ru31rYtKwF499HkTu+DRzq3TCKDFRQ==}
+  /del/6.1.1:
+    resolution: {integrity: sha512-ua8BhapfP0JUJKC/zV9yHHDW/rDoDxP4Zhn3AkA6/xT6gY7jYXJiaeyBZznYVujhZZET+UgcbZiQ7sN3WqcImg==}
     engines: {node: '>=10'}
     dependencies:
       globby: 11.1.0
-      graceful-fs: 4.2.4
+      graceful-fs: 4.2.6
       is-glob: 4.0.3
       is-path-cwd: 2.2.0
       is-path-inside: 3.0.2
@@ -4983,7 +5033,6 @@ packages:
       minimatch: 3.1.2
       once: 1.4.0
       path-is-absolute: 1.0.1
-    dev: true
 
   /global-dirs/3.0.0:
     resolution: {integrity: sha512-v8ho2DS5RiCjftj1nD9NmnfaOzTdud7RRnVd9kFNOjqZbISlx5DQ+OrTkywgd0dIt7oFCvKetZSHoHcP3sDdiA==}
@@ -5408,7 +5457,6 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       builtin-modules: 3.1.0
-    dev: false
 
   /is-callable/1.2.2:
     resolution: {integrity: sha512-dnMqspv5nU3LoewK2N/y7KLtxtakvTuaCsU9FU50/QDmdbHNy/4/JuRtMHqRU22o3q+W89YQndQEeCVwK+3qrA==}
@@ -5911,7 +5959,7 @@ packages:
     resolution: {integrity: sha512-cJGP40Jc/VXUsp8/OrnyKyTZ1y6v/dphm3bioS+RrKXjK2BB6wHUd6JptZEFDGgGahMT+InnZO5i1Ei9mpC8Bw==}
     engines: {node: '>=6'}
     dependencies:
-      graceful-fs: 4.2.4
+      graceful-fs: 4.2.6
       parse-json: 4.0.0
       pify: 4.0.1
       strip-bom: 3.0.0
@@ -6302,7 +6350,6 @@ packages:
 
   /node-noop/1.0.0:
     resolution: {integrity: sha512-1lpWqKwZ9yUosQfW1uy3jm6St4ZbmeDKKGmdzwzedbyBI4LgHtGyL1ofDdqiSomgaYaSERi+qWtj64huJQjl7g==}
-    dev: true
 
   /node-preload/0.2.1:
     resolution: {integrity: sha512-RM5oyBy45cLEoHqCeh+MNuFAxO0vTFBLskvQbOKnEE7YTTSN4tbN8QWDIPQ6L+WvKsB/qLEGpYe2ZZ9d4W9OIQ==}
@@ -7319,7 +7366,7 @@ packages:
     resolution: {integrity: sha1-hSBLVNuoLVdC4oyWdW70OvUOM4Q=}
     engines: {node: '>= 0.10'}
     dependencies:
-      resolve: 1.18.1
+      resolve: 1.20.0
     dev: true
 
   /redent/3.0.0:
@@ -7527,7 +7574,7 @@ packages:
     resolution: {integrity: sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==}
     hasBin: true
     dependencies:
-      glob: 7.1.6
+      glob: 7.1.7
     dev: false
 
   /rimraf/3.0.2:
@@ -7583,6 +7630,14 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
+
+  /rollup/3.0.0-7:
+    resolution: {integrity: sha512-Hq5hpq9IrR4YfGd4o4zDtsfZnkwoCpjrQ4ZQIZrVF4ryzW6FOgXKBm6N7vJfodIJ6v+51FsqsXD2bxW5wapiuA==}
+    engines: {node: '>=14.18.0', npm: '>=8.0.0'}
+    hasBin: true
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
 
   /run-parallel/1.1.9:
     resolution: {integrity: sha512-DEqnSRTDw/Tc3FXf49zedI638Z9onwUotBMiUFKmrO2sdFKIbXamXGQ3Axd4qgphxKB4kw/qP1w5kTxnfU1B9Q==}
@@ -8538,7 +8593,7 @@ packages:
   /write-file-atomic/2.4.3:
     resolution: {integrity: sha512-GaETH5wwsX+GcnzhPgKcKjJ6M2Cq3/iZp1WyY/X1CSqrW+jVNM9Y7D8EC2sM4ZG/V8wZlSniJnCKWPmBYAucRQ==}
     dependencies:
-      graceful-fs: 4.2.4
+      graceful-fs: 4.2.6
       imurmurhash: 0.1.4
       signal-exit: 3.0.3
     dev: true
@@ -8557,7 +8612,7 @@ packages:
     engines: {node: '>=6'}
     dependencies:
       detect-indent: 5.0.0
-      graceful-fs: 4.2.4
+      graceful-fs: 4.2.6
       make-dir: 2.1.0
       pify: 4.0.1
       sort-keys: 2.0.0
